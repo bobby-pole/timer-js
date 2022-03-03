@@ -15,15 +15,15 @@ body {
 .dropdown {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .timer {
-  width: 22vw;
-  height: 45vh;
+  width: 35vw;
+  height: 55vh;
   background-color: white;
   border-radius: 20px;
   box-shadow: 10, 10, black;
@@ -31,13 +31,45 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 5px solid black;
+}
+
+@media screen and (max-width: 426px) {
+  .timer {
+    width: 85vw;
+  }
+  .timer_btn {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .timer {
+    width: 30vw;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .timer {
+    width: 22vw;
+    height: 50vh;
+  }
 }
 
 .timer_header {
-  padding-bottom: 35px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .timer_h1 {
   font-size: 3em;
+}
+
+#alarm-img {
+  animation: shake 0.1s infinite;
 }
 
 .timer_clock {
@@ -77,8 +109,36 @@ body {
   /* font-weight: bold; */
 }
 
+.timer_btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.55;
+}
+
+.timer_btn:hover {
+  opacity: 1;
+}
+
+@keyframes shake {
+  25% {
+    transform: translateX(-1px);
+  }
+  75% {
+    transform: translateX(1px);
+  }
+}
+
+.hide {
+  display: none;
+}
+
 .material-icons.green {
   color: #387a38;
+}
+
+.material-icons.red {
+  color: #b32a00;
 }
 .material-icons.md-60 {
   font-size: 60px;
