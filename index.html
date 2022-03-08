@@ -15,6 +15,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer></script>
+
     <title>Timer</title>
   </head>
   <body>
@@ -22,9 +24,7 @@
       <main class="timer">
         <header class="timer_header">
           <h1 class="timer_h1">Timer</h1>
-          <span class="material-icons md-60" id="alarm-img" data-clock-img>
-            alarm_on
-          </span>
+          <span class="material-icons md-60" data-clock-img> alarm_on </span>
         </header>
         <section class="timer_clock">
           <div class="clock">
@@ -38,6 +38,7 @@
               max="24"
               class="timer_input"
               data-timer-input
+              disabled
             />
           </div>
           <div class="clock">
@@ -51,6 +52,7 @@
               max="59"
               class="timer_input"
               data-timer-input
+              disabled
             />
           </div>
           <div class="clock">
@@ -64,6 +66,7 @@
               max="59"
               class="timer_input"
               data-timer-input
+              disabled
             />
           </div>
         </section>
@@ -76,22 +79,26 @@
               >pause_circle_filled</span
             >
           </button>
-          <button class="timer_btn" data-edit>
-            <span class="material-icons md-60">edit</span>
+          <button class="timer_btn" data-edit-btn>
+            <span class="material-icons md-60" data-edit>edit</span>
+            <span
+              class="material-icons green material-icons md-60 hide"
+              data-done
+              >done</span
+            >
           </button>
           <button class="timer_btn" data-reset>
             <span class="material-icons md-60">refresh</span>
           </button>
         </section>
         <section class="timer_alarm">
-          <audio src="./assets/sounds/Alarm Clock.mp3" loop data-alarm></audio>
+          <audio
+            src="./assets/sounds/Mechanical Clock Ring.mp3"
+            loop
+            data-alarm
+          ></audio>
         </section>
       </main>
     </div>
-    <script src="./main.js"></script>
-    <script>
-      const timer = new Timer();
-      timer.initializeTimer();
-    </script>
   </body>
 </html>

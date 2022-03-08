@@ -68,7 +68,7 @@ body {
   font-size: 3em;
 }
 
-#alarm-img {
+.alarm-img {
   animation: shake 0.1s infinite;
 }
 
@@ -113,11 +113,15 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  opacity: 0.55;
+  opacity: 0.7;
 }
 
 .timer_btn:hover {
   opacity: 1;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 @keyframes shake {
